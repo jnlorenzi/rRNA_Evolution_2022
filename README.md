@@ -19,7 +19,7 @@ Biopython
 
 ## script description
 
-for each python script, the command : python [script_name].py --help returns detailed execution information
+For each python script, the command : python [script_name].py --help returns detailed execution information
 
 _make_core.py_ : from pairwise blastp, returns homolog and core genome relationship.
 
