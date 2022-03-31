@@ -3,6 +3,8 @@ Script used for the rRNA evolution paper (2022)
 
 ## requirements
 
+BLAST+ executable in the $PATH, or available on the command line
+
 ### _Python_ mods
 os
 
@@ -12,6 +14,7 @@ argparse
 
 json
 
+Biopython
 
 
 ## script description
