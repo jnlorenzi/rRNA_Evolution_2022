@@ -92,13 +92,11 @@ ortholog = ortholog_finder(homolog)
 with open(path_ortholog, 'w') as outfile:
     json.dump(ortholog, outfile)
         
-#annotation = pickle.load(open(path_base + '/annotation' + condition + '.p', 'rb'))
 persistence = persistence_finder(ortholog)        
 if not os.path.exists(path + '/persistence/'):
         os.makedirs(path + '/persistence/')
 for species in persistence:
         with open(path + '/persistence/' + species + '.tab', 'w') as outfile:                        
-                pos = position_extractor(persistence[species], annotation)
                 outfile.write('\t'.join([str(x) for x in sorted(persistence[species], key = lambda x: int(x.split('_')[1]))]) + 
                                 '\n' + 
                                 '\t'.join([str(persistence[species][x]) for x in sorted(persistence[species], key = lambda x: int(x.split('_')[1]))]) + '\n')
